@@ -13,10 +13,11 @@ import {timeSort} from "./time-sort";
 import {bogoSort} from "./bogo-sort";
 import {bozoSort} from "./bozo-sort";
 import {tacoSort} from "./taco-sort";
+import {luckySort} from "./lucky-sort";
 
 const version = '__lib_version__';
 
-const superSortAlgorithms = {stalinSort, miracleSort, timeSort, bogoSort, bozoSort, tacoSort};
+const superSortAlgorithms = {stalinSort, miracleSort, timeSort, bogoSort, bozoSort, tacoSort, luckySort};
 
 async function superSort(input: number[], direction: 'asc' | 'desc' = 'asc'): Promise<number[]> {
   const algorithm = randomPick(Object.values(superSortAlgorithms));

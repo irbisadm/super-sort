@@ -17,7 +17,7 @@ function randomShuffle<T>(input: T[]): T[] {
 
 function fisherYatesShuffle<T>(input: T[]) {
   const array = [...input];
-  let length  = array.length;
+  let length = array.length;
   while (length) {
     const i = Math.floor(Math.random() * length--);
     [array[length], array[i]] = [array[i], array[length]];

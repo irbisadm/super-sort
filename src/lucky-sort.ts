@@ -6,17 +6,14 @@
  * You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import {randomShuffle} from "./random-stuff";
 import {isSorted, isSortedDescending} from "./is-sorted";
 
-function bogoSort<T>(input: T[], direction: 'asc' | 'desc' = 'asc'): T[] {
+function luckySort<T>(input: T[], direction: 'asc' | 'desc' = 'asc'): T[] {
   const validator = direction === 'asc' ? isSorted : isSortedDescending;
-  while (true) {
-    const shuffled = randomShuffle(input);
-    if (validator(shuffled)) {
-      return shuffled;
-    }
+  if (validator(input)) {
+    return input;
   }
+  throw 'Bad luck!';
 }
 
-export {bogoSort}
+export {luckySort}
