@@ -1,6 +1,6 @@
 {
   "name": "@irbisadm/super-sort",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "GPL-3-0-or-later",
   "private": false,
   "repository": "https://github.com/irbisadm/super-sort",
@@ -8,7 +8,7 @@
   "module": "./dist/index.mjs",
   "main": "./dist/index.mjs",
   "types": "./types/index.d.ts",
-  "keywords": ["joke","stalinsort","bogosort","bogobogosort","bozosort","miraclesort","timesort"],
+  "keywords": ["joke","stalinsort","bogosort","bozosort","miraclesort","timesort"],
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
     "@rollup/plugin-terser": "^0.4.3",
