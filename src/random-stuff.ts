@@ -15,6 +15,16 @@ function randomShuffle<T>(input: T[]): T[] {
   return array;
 }
 
+function fisherYatesShuffle<T>(input: T[]) {
+  const array = [...input];
+  let length  = array.length;
+  while (length) {
+    const i = Math.floor(Math.random() * length--);
+    [array[length], array[i]] = [array[i], array[length]];
+  }
+  return array;
+}
+
 function randomPick<T>(input: T[]): T {
   const min = 0;
   const max = input.length;
@@ -22,4 +32,4 @@ function randomPick<T>(input: T[]): T {
   return input[index];
 }
 
-export {randomShuffle, randomPick}
+export {randomShuffle, fisherYatesShuffle, randomPick}
