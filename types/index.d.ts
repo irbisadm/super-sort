@@ -10,7 +10,9 @@ declare function bozoSort<T>(input: T[], direction?: 'asc' | 'desc'): T[];
 
 declare function tacoSort<T = number>(input: T[], direction?: 'asc' | 'desc'): T[];
 
-declare const version = "0.0.1";
+declare function luckySort<T>(input: T[], direction?: 'asc' | 'desc'): T[];
+
+declare const version = "0.0.5";
 declare const superSortAlgorithms: {
     stalinSort: typeof stalinSort;
     miracleSort: typeof miracleSort;
@@ -18,6 +20,7 @@ declare const superSortAlgorithms: {
     bogoSort: typeof bogoSort;
     bozoSort: typeof bozoSort;
     tacoSort: typeof tacoSort;
+    luckySort: typeof luckySort;
 };
 declare function superSort(input: number[], direction?: 'asc' | 'desc'): Promise<number[]>;
 

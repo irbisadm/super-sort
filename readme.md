@@ -12,7 +12,7 @@ yarn add @irbisadm/super-sort
 
 ## Usage
 
-If you have at least nine points of lick, you can use this library without any problems. With general sorting approach,
+If you have at least nine points of luck, you can use this library without any problems. With general sorting approach,
 you can sort any array of numbers with superSort function.
 
 The superSort function will select random algorithm from the list of algorithms and sort your array.
@@ -60,7 +60,7 @@ It's best complexity is O(0). It's worst complexity is O(∞).
 import {miracleSort} from '@irbisadm/super-sort';
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const sorted = miracleSort(arr);
+const sorted = await miracleSort(arr);
 ```
 
 ### Time Sort
@@ -103,7 +103,7 @@ const sorted = stalinSort(arr);
 ### Lucky Sort
 
 Most efficient sort algorithm: if the array is already sorted, it will not perform any operations!
-It's best complexity is O(0). It's worst complexity is O(0).
+It's best complexity is O(n). It's worst complexity is O(0).
 
 ```js
 import {luckySort} from '@irbisadm/super-sort';

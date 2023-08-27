@@ -8,18 +8,13 @@
 
 function stalinSort<T = any>(suspects: T[], direction: 'asc' | 'desc' = 'asc'): T[] {
   if (suspects.length <= 1) return suspects;
-  let survivors = [suspects[0]];
   for (let i = 1; i < suspects.length; i++) {
-    const survivorsMax = survivors.length - 1;
-    if (direction === 'asc' && survivors[survivorsMax] > suspects[i]) {
-      continue; // shoot traitor!
+    if ( (direction === 'asc' && suspects[i-1] > suspects[i])
+      || (direction === 'desc' && suspects[i-1] < suspects[i])) {
+      suspects.splice(i,1); // shoot traitor!
     }
-    if (direction === 'desc' && survivors[survivorsMax] < suspects[i]) {
-      continue; // shoot traitor!
-    }
-    survivors.push(suspects[i]);
   }
-  return survivors;
+  return suspects;
 }
 
 export {stalinSort}
