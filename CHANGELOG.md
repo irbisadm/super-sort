@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/irbisadm/super-sort/compare/v1.0.0...v1.1.0) (2026-07-14)
+
+
+### Features
+
+* add askClaude sort ([40c9ca7](https://github.com/irbisadm/super-sort/commit/40c9ca793d81449e7854d259eee97badb8a8302c))
+* add quantum bogosort ([f9636ef](https://github.com/irbisadm/super-sort/commit/f9636efda116e8a9b9229216edf2ba583efa57c4))
+* add thanos sort ([cbabcd1](https://github.com/irbisadm/super-sort/commit/cbabcd1dad43f632a8f949fc261d5025a8d92564))
+
 # 1.0.0 (2026-07-14)
 
 
