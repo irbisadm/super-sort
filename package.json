@@ -25,14 +25,24 @@
     "@rollup/plugin-replace": "^5.0.2",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-typescript": "^11.1.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/node": "^20.5.1",
     "rollup": "^3.28.1",
     "rollup-plugin-dts": "^6.0.0",
+    "semantic-release": "^25",
     "tslib": "^2.6.2",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vitest": "^4.1.10"
   },
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepack": "rollup -c"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "engines": {
     "node": ">=v18.17.1"
