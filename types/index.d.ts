@@ -20,6 +20,8 @@ declare function quantumBogoSort<T>(input: T[], direction?: 'asc' | 'desc'): T[]
 
 declare function thanosSort<T>(input: T[], direction?: 'asc' | 'desc'): T[];
 
+declare function askClaudeSort<T = number>(input: T[], direction: "asc" | "desc" | undefined, apiKey: string): Promise<T[]>;
+
 declare const version = "1.0.0";
 declare const superSortAlgorithms: {
     stalinSort: typeof stalinSort;
@@ -36,4 +38,4 @@ declare const superSortAlgorithms: {
 };
 declare function superSort(input: number[], direction?: 'asc' | 'desc'): Promise<number[]>;
 
-export { superSort, superSortAlgorithms, version };
+export { askClaudeSort, superSort, superSortAlgorithms, version };

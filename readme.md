@@ -185,6 +185,22 @@ const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const sorted = thanosSort(arr);
 ```
 
+### Ask Claude Sort
+
+The ultimate act of delegation: instead of sorting anything itself, it hands the whole array to the
+Anthropic (Claude) API and trusts whatever comes back. Unlike every other algorithm here, this one is
+useless offline — it requires network access and a valid Anthropic API key, which must be passed on
+every call (it is never read from the environment). Not part of `superSort` (it needs a key), so import
+it directly.
+It's best complexity is O(n). It's worst complexity is O(∞) (rate limits, retries, and the heat death of the API).
+
+```js
+import {askClaudeSort} from '@irbisadm/super-sort';
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const sorted = await askClaudeSort(arr, 'asc', process.env.ANTHROPIC_API_KEY);
+```
+
 ## Contributing
 
 Contributions are welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md). By participating you agree
