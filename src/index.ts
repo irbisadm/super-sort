@@ -8,6 +8,7 @@ import {tacoSort} from "./taco-sort";
 import {luckySort} from "./lucky-sort";
 import {capitalismSort} from "./capitalism-sort";
 import {communismSort} from "./communism-sort";
+import {askClaudeSort} from "./ask-claude-sort";
 
 const version = '__lib_version__';
 
@@ -21,5 +22,6 @@ async function superSort(input: number[], direction: 'asc' | 'desc' = 'asc'): Pr
 export {
   superSort,
   superSortAlgorithms,
+  askClaudeSort,
   version
 }
