@@ -2,6 +2,12 @@
 
 The Collection of O(n) and O(1) sorting algorithms
 
+[![npm version](https://img.shields.io/npm/v/@irbisadm/super-sort?logo=npm)](https://www.npmjs.com/package/@irbisadm/super-sort)
+[![npm downloads](https://img.shields.io/npm/dm/@irbisadm/super-sort)](https://www.npmjs.com/package/@irbisadm/super-sort)
+[![CI](https://github.com/irbisadm/super-sort/actions/workflows/ci.yml/badge.svg)](https://github.com/irbisadm/super-sort/actions/workflows/ci.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./license.md)
+[![semantic-release](https://img.shields.io/badge/semantic--release-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 ## Installation
 
 ```bash
@@ -149,3 +155,12 @@ import {communismSort} from '@irbisadm/super-sort';
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const sorted = communismSort(arr);
 ```
+
+## Contributing
+
+Contributions are welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md). By participating you agree
+to our [Code of Conduct](./CODE_OF_CONDUCT.md). Found a security issue? See [SECURITY.md](./SECURITY.md).
+
+## License
+
+[MIT](./license.md) © Igor Sheko
