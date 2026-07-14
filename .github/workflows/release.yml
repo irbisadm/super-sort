@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write       # push the release commit/tag and create GitHub Releases
+  issues: write         # semantic-release comments on released issues
+  pull-requests: write  # semantic-release comments on released PRs
+  id-token: write       # OIDC trusted publishing to npm (+ automatic provenance)
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # semantic-release needs the full history and tags
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22  # @semantic-release/npm@13 requires Node >=22.14
+          cache: yarn
+          # NOTE: do NOT set registry-url — it writes an .npmrc that conflicts
+          # with OIDC trusted publishing.
+      - name: Use an OIDC-capable npm
+        run: npm install -g npm@latest  # trusted publishing needs npm >=11.5.1
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: yarn test
+      - name: Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # No NPM_TOKEN: authentication happens via OIDC trusted publishing.
