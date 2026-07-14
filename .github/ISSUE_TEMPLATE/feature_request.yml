@@ -1,0 +1,24 @@
+name: New algorithm / feature
+description: Propose a new terrible sorting algorithm or an enhancement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: Describe the algorithm or feature. What's the joke?
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected behavior / "complexity"
+      description: How should it (not) work? Best case / worst case?
+  - type: checkboxes
+    id: spirit
+    attributes:
+      label: Confirmation
+      options:
+        - label: This keeps super-sort's spirit — it's a joke library, not a real sorting toolkit
+          required: true

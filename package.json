@@ -1,7 +1,8 @@
 {
   "name": "@irbisadm/super-sort",
   "version": "1.0.0",
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
+  "author": "Igor Sheko <i@irbisadm.dev>",
   "private": false,
   "repository": "https://github.com/irbisadm/super-sort",
   "bugs": "https://github.com/irbisadm/super-sort/issues",
@@ -28,7 +29,7 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/node": "^20.5.1",
-    "rollup": "^3.28.1",
+    "rollup": "^3.30.0",
     "rollup-plugin-dts": "^6.0.0",
     "semantic-release": "^25",
     "tslib": "^2.6.2",
@@ -43,6 +44,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "resolutions": {
+    "serialize-javascript": "^7.0.5",
+    "@rollup/pluginutils/picomatch": "^2.3.2",
+    "micromatch/picomatch": "^2.3.2"
   },
   "engines": {
     "node": ">=v18.17.1"
