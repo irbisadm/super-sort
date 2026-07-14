@@ -16,7 +16,9 @@ declare function capitalismSort<T = number>(input: T[], direction?: 'asc' | 'des
 
 declare function communismSort<T = number>(input: T[], direction?: 'asc' | 'desc'): T[];
 
-declare const version = "0.0.5";
+declare function thanosSort<T>(input: T[], direction?: 'asc' | 'desc'): T[];
+
+declare const version = "1.0.0";
 declare const superSortAlgorithms: {
     stalinSort: typeof stalinSort;
     miracleSort: typeof miracleSort;
@@ -27,6 +29,7 @@ declare const superSortAlgorithms: {
     luckySort: typeof luckySort;
     capitalismSort: typeof capitalismSort;
     communismSort: typeof communismSort;
+    thanosSort: typeof thanosSort;
 };
 declare function superSort(input: number[], direction?: 'asc' | 'desc'): Promise<number[]>;
 
