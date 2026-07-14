@@ -156,6 +156,21 @@ const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const sorted = communismSort(arr);
 ```
 
+### Quantum Bogo Sort
+
+The most efficient sort algorithm in the multiverse: it shuffles the array exactly once and, if the
+result is not sorted, it simply destroys the universe. By the many-worlds interpretation, every branch
+where the array came out unsorted ceases to exist, so in every surviving branch the array is — with
+certainty — already sorted.
+It's best complexity is O(n). It's worst complexity is O(n) (the universe is destroyed either way).
+
+```js
+import {quantumBogoSort} from '@irbisadm/super-sort';
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const sorted = quantumBogoSort(arr);
+```
+
 ### Thanos Sort
 
 Perfectly balanced, as all things should be. While the array is out of order, Thanos snaps his fingers

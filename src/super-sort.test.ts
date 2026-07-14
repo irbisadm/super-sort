@@ -6,6 +6,7 @@ describe('superSortAlgorithms registry', () => {
     expect(Object.keys(superSortAlgorithms)).toEqual([
       'stalinSort', 'miracleSort', 'timeSort', 'bogoSort',
       'bozoSort', 'tacoSort', 'luckySort', 'capitalismSort', 'communismSort',
+      'quantumBogoSort',
       'thanosSort',
     ]);
     for (const algorithm of Object.values(superSortAlgorithms)) {

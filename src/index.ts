@@ -8,11 +8,12 @@ import {tacoSort} from "./taco-sort";
 import {luckySort} from "./lucky-sort";
 import {capitalismSort} from "./capitalism-sort";
 import {communismSort} from "./communism-sort";
+import {quantumBogoSort} from "./quantum-bogo-sort";
 import {thanosSort} from "./thanos-sort";
 
 const version = '__lib_version__';
 
-const superSortAlgorithms = {stalinSort, miracleSort, timeSort, bogoSort, bozoSort, tacoSort, luckySort, capitalismSort, communismSort, thanosSort};
+const superSortAlgorithms = {stalinSort, miracleSort, timeSort, bogoSort, bozoSort, tacoSort, luckySort, capitalismSort, communismSort, quantumBogoSort, thanosSort};
 
 async function superSort(input: number[], direction: 'asc' | 'desc' = 'asc'): Promise<number[]> {
   const algorithm = randomPick(Object.values(superSortAlgorithms));
