@@ -12,6 +12,10 @@ declare function tacoSort<T = number>(input: T[], direction?: 'asc' | 'desc'): T
 
 declare function luckySort<T>(input: T[], direction?: 'asc' | 'desc'): T[];
 
+declare function capitalismSort<T = number>(input: T[], direction?: 'asc' | 'desc', real?: boolean): T[];
+
+declare function communismSort<T = number>(input: T[], direction?: 'asc' | 'desc'): T[];
+
 declare const version = "0.0.5";
 declare const superSortAlgorithms: {
     stalinSort: typeof stalinSort;
@@ -21,6 +25,8 @@ declare const superSortAlgorithms: {
     bozoSort: typeof bozoSort;
     tacoSort: typeof tacoSort;
     luckySort: typeof luckySort;
+    capitalismSort: typeof capitalismSort;
+    communismSort: typeof communismSort;
 };
 declare function superSort(input: number[], direction?: 'asc' | 'desc'): Promise<number[]>;
 

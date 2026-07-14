@@ -111,3 +111,41 @@ import {luckySort} from '@irbisadm/super-sort';
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const sorted = luckySort(arr);
 ```
+
+### Capitalism Sort
+
+A terribly inefficient sort algorithm powered by the invisible hand of the free market: two players
+meet and the richer one takes a coin from the poorer, so the rich get richer and the poor get poorer,
+until the market happens to regulate itself into order.
+It's best complexity is O(n). It's worst complexity is O(∞).
+
+```js
+import {capitalismSort} from '@irbisadm/super-sort';
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const sorted = capitalismSort(arr);
+```
+
+Pass `real: true` for real, unregulated capitalism: the invisible hand always ends in monopoly — the
+single richest player seizes the entire market and everyone else is left with nothing. Runs in O(n).
+
+```js
+import {capitalismSort} from '@irbisadm/super-sort';
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const monopoly = capitalismSort(arr, 'asc', true); // => [0, 0, 0, 0, 0, 0, 0, 0, 45]
+```
+
+### Communism Sort
+
+Most equal sort algorithm: all wealth is redistributed evenly, so every element becomes the mean and
+the collective is — by definition — already in perfect order. Direction does not matter: when everyone
+is equal, there is no up and no down.
+It's best complexity is O(n). It's worst complexity is O(n).
+
+```js
+import {communismSort} from '@irbisadm/super-sort';
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const sorted = communismSort(arr);
+```
