@@ -171,6 +171,20 @@ const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const sorted = quantumBogoSort(arr);
 ```
 
+### Thanos Sort
+
+Perfectly balanced, as all things should be. While the array is out of order, Thanos snaps his fingers
+and half of the elements turn to dust at random. Eventually the survivors are in order — there may just
+be fewer of them than the universe started with.
+It's best complexity is O(n). It's worst complexity is O(n log n).
+
+```js
+import {thanosSort} from '@irbisadm/super-sort';
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const sorted = thanosSort(arr);
+```
+
 ## Contributing
 
 Contributions are welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md). By participating you agree

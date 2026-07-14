@@ -7,6 +7,7 @@ describe('superSortAlgorithms registry', () => {
       'stalinSort', 'miracleSort', 'timeSort', 'bogoSort',
       'bozoSort', 'tacoSort', 'luckySort', 'capitalismSort', 'communismSort',
       'quantumBogoSort',
+      'thanosSort',
     ]);
     for (const algorithm of Object.values(superSortAlgorithms)) {
       expect(typeof algorithm).toBe('function');
