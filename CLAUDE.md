@@ -48,4 +48,4 @@ To release, bump `version` in `package.json` only.
   e.g. `stalinSort` mutates the caller's array in place (`splice`), `luckySort` returns the input by
   reference, while `bozoSort`/`tacoSort` copy first. Match the intended behavior of the specific
   algorithm rather than normalizing across them.
-- Every source file carries the GPL-3.0 copyright header — keep it on new files.
+- The project is MIT-licensed (`license.md`); source files carry **no** per-file license header — don't add one to new files.
