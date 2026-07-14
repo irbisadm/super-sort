@@ -156,6 +156,51 @@ const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const sorted = communismSort(arr);
 ```
 
+### Quantum Bogo Sort
+
+The most efficient sort algorithm in the multiverse: it shuffles the array exactly once and, if the
+result is not sorted, it simply destroys the universe. By the many-worlds interpretation, every branch
+where the array came out unsorted ceases to exist, so in every surviving branch the array is — with
+certainty — already sorted.
+It's best complexity is O(n). It's worst complexity is O(n) (the universe is destroyed either way).
+
+```js
+import {quantumBogoSort} from '@irbisadm/super-sort';
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const sorted = quantumBogoSort(arr);
+```
+
+### Thanos Sort
+
+Perfectly balanced, as all things should be. While the array is out of order, Thanos snaps his fingers
+and half of the elements turn to dust at random. Eventually the survivors are in order — there may just
+be fewer of them than the universe started with.
+It's best complexity is O(n). It's worst complexity is O(n log n).
+
+```js
+import {thanosSort} from '@irbisadm/super-sort';
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const sorted = thanosSort(arr);
+```
+
+### Ask Claude Sort
+
+The ultimate act of delegation: instead of sorting anything itself, it hands the whole array to the
+Anthropic (Claude) API and trusts whatever comes back. Unlike every other algorithm here, this one is
+useless offline — it requires network access and a valid Anthropic API key, which must be passed on
+every call (it is never read from the environment). Not part of `superSort` (it needs a key), so import
+it directly.
+It's best complexity is O(n). It's worst complexity is O(∞) (rate limits, retries, and the heat death of the API).
+
+```js
+import {askClaudeSort} from '@irbisadm/super-sort';
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const sorted = await askClaudeSort(arr, 'asc', process.env.ANTHROPIC_API_KEY);
+```
+
 ## Contributing
 
 Contributions are welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md). By participating you agree

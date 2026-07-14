@@ -2,6 +2,7 @@ version: 2
 updates:
   - package-ecosystem: npm
     directory: "/"
+    target-branch: "develop"   # open dependency PRs against develop, not main
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
@@ -14,6 +15,7 @@ updates:
 
   - package-ecosystem: github-actions
     directory: "/"
+    target-branch: "develop"   # open dependency PRs against develop, not main
     schedule:
       interval: weekly
     commit-message:
