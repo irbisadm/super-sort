@@ -28,7 +28,7 @@ export default [
         ],
     },
     {
-        input: 'dist/build/index.d.ts',
+        input: 'dist/index.d.ts',
         output: {
             file: 'types/index.d.ts',
             format: 'es'
