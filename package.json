@@ -48,7 +48,13 @@
   "resolutions": {
     "serialize-javascript": "^7.0.5",
     "@rollup/pluginutils/picomatch": "^2.3.2",
-    "micromatch/picomatch": "^2.3.2"
+    "micromatch/picomatch": "^2.3.2",
+    "**/@actions/http-client/undici": "^6.28.0",
+    "**/node-gyp/undici": "^6.28.0",
+    "**/@semantic-release/github/undici": "^7.29.0",
+    "ip-address": "^10.3.1",
+    "brace-expansion": "^5.0.9",
+    "tar": "^7.5.21"
   },
   "engines": {
     "node": ">=v18.17.1"
