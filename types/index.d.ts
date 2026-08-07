@@ -22,7 +22,7 @@ declare function thanosSort<T>(input: T[], direction?: 'asc' | 'desc'): T[];
 
 declare function askClaudeSort<T = number>(input: T[], direction: "asc" | "desc" | undefined, apiKey: string): Promise<T[]>;
 
-declare const version = "1.0.0";
+declare const version = "1.1.0";
 declare const superSortAlgorithms: {
     stalinSort: typeof stalinSort;
     miracleSort: typeof miracleSort;
