@@ -12,11 +12,22 @@ non-terminating by design. Preserve the joke; don't "fix" an algorithm into a re
 ## Commands
 
 - `yarn install` — install deps (yarn is the package manager; `yarn.lock` is committed).
-- `yarn build` — the only script. Runs `rollup -c`.
+- `yarn build` — runs `rollup -c`. Also wired to `prepack`, so packing rebuilds.
+- `yarn test` — runs `vitest run`. `yarn test:watch` for watch mode.
 
-There is **no test runner and no linter** configured. TypeScript itself is the only correctness
-gate: the build fails on type errors (`noEmitOnError: true`), so run `yarn build` to type-check.
-Requires Node `>=18.17.1`.
+There is **no linter** configured. The two correctness gates are vitest and TypeScript itself —
+the build fails on type errors (`noEmitOnError: true`), so `yarn build` doubles as the type-check.
+CI (`.github/workflows/ci.yml`) runs `yarn build` then `yarn test` on every push and PR, and the
+release workflow runs both before publishing. Requires Node `>=18.17.1`.
+
+Tests are colocated with the sources as `src/<name>.test.ts` (vitest runs with no config file).
+Two conventions matter, both following from the algorithms being jokes:
+
+- Randomised, possibly non-terminating algorithms (`bogo`, `bozo`, `taco`) are only exercised on
+  inputs of one or two elements, where termination is practically guaranteed. Do not add a
+  larger-input test — it can hang CI forever.
+- Tests assert the joke's documented contract, not sortedness. `stalinSort` is asserted to delete
+  the out-of-order elements and to mutate the caller's array in place (`expect(result).toBe(input)`).
 
 ## Build pipeline (rollup.config.mjs)
 
@@ -38,7 +49,8 @@ To release, bump `version` in `package.json` only.
   uniform signature `(input: T[], direction: 'asc' | 'desc' = 'asc')` returning `T[]` or `Promise<T[]>`.
 - **`src/index.ts` is the barrel and registry.** `superSort()` picks a random algorithm from the
   `superSortAlgorithms` object via `randomPick`. **Adding an algorithm = create the file + add it to
-  both the import list and the `superSortAlgorithms` object here**, then `yarn build` to refresh types.
+  both the import list and the `superSortAlgorithms` object here**, then `yarn build` to refresh types
+  and `yarn test` to check nothing broke. Add a `src/<name>.test.ts` alongside the new algorithm.
 - **Shared helpers, reused by nearly every algorithm:**
   - `src/is-sorted.ts` — the `isSorted` / `isSortedDescending` validators. The canonical pattern is
     `const validator = direction === 'asc' ? isSorted : isSortedDescending`. Note these compare using
