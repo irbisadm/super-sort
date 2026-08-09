@@ -47,8 +47,6 @@
   },
   "resolutions": {
     "serialize-javascript": "^7.0.5",
-    "@rollup/pluginutils/picomatch": "^2.3.2",
-    "micromatch/picomatch": "^2.3.2",
     "**/@actions/http-client/undici": "^6.28.0",
     "**/node-gyp/undici": "^6.28.0",
     "**/@semantic-release/github/undici": "^7.29.0",
