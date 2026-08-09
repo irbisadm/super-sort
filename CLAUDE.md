@@ -20,6 +20,12 @@ the build fails on type errors (`noEmitOnError: true`), so `yarn build` doubles 
 CI (`.github/workflows/ci.yml`) runs `yarn build` then `yarn test` on every push and PR, and the
 release workflow runs both before publishing. Requires Node `>=18.17.1`.
 
+The two workflows pin different Node versions on purpose: `ci.yml` uses 20, close to the lower
+bound the package claims to support, while `release.yml` uses 22 because `@semantic-release/git`
+needs `Set.prototype.union`, which only exists from Node 22. A consequence worth knowing: running
+`semantic-release` locally on Node 20 fails with `TEXT_ENCODINGS.union is not a function`. That is
+the Node version, not a broken config — releases run in CI anyway.
+
 Tests are colocated with the sources as `src/<name>.test.ts` (vitest runs with no config file).
 Two conventions matter, both following from the algorithms being jokes:
 
